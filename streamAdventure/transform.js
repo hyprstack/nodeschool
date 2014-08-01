@@ -1,6 +1,7 @@
-/*Convert data from `process.stdin` to upper-case data on `process.stdout`
+/*
+Objective - Convert data from `process.stdin` to upper-case data on `process.stdout`
 using the `through` module.
-
+------
 through(write, end) returns a readable/writable stream and given `write` and
 `end` functions, both of which are optional.
 
@@ -21,4 +22,5 @@ var through = require('through');
 var tr = through(function (buf) {
     this.queue(buf.toString().toUpperCase());
 });
+//stdin pipes the buffer to tr which transforms it and then re-pipes it to stdout
 process.stdin.pipe(tr).pipe(process.stdout);
