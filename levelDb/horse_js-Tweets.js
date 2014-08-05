@@ -43,6 +43,7 @@ module.exports = function(db, date, callback){
 
 
 /*
+
 HINTS:
 
 The ISO date format will always sort lexicographically, which means
