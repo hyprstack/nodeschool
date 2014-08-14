@@ -1,0 +1,7 @@
+.DS_Store/**
+.git
+node_modules/*
+coverage.html
+test-resources.js
+index-resources.js
+erl_crash.dump/**
